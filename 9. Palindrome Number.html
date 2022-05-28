@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9. Palindrome Number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Titillium+Web:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        color: #222e50ff;
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        line-height: 1;
+      }
+
+      h3 {
+        text-align: center;
+        color: red;
+        margin-top: 20px;
+        margin-bottom: auto;
+      }
+
+      h4 {
+        color: darkblue;
+        margin-left: 150px;
+      }
+      p {
+        margin-top: auto;
+        margin-left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>9. Palindrome Number</h3>
+    <p>
+      Given an integer <code>x</code>, return <code>true</code> if
+      <code>x</code> is palindrome integer.<br />
+
+      An integer is a <b>palindrome</b> when it reads the same backward as
+      forward.<br />
+
+      For example, <code>121</code> is a palindrome while <code>123</code> is
+      not.<br />
+    </p>
+    <h4>Example 1:</h4>
+    <p>
+      Input: x = 121<br />
+      Output: true<br />
+      Explanation: 121 reads as 121 from left to right and from right to
+      left.<br />
+    </p>
+    <h4>Example 2:</h4>
+    <p>
+      Input: x = -121<br />
+      Output: false<br />
+      Explanation: From left to right, it reads -121. From right to left, it
+      becomes 121-. Therefore it is not a palindrome.<br />
+    </p>
+    <h4>Example 3:</h4>
+    <p>
+      Input: x = 10<br />
+      Output: false<br />
+      Explanation: Reads 01 from right to left. Therefore it is not a
+      palindrome.<br />
+    </p>
+    <script>
+      // toString().split("").reverse().join("");
+      /* Ниже закоментирован пошаговый разбор каждого метода из цепочки
+      для точного понимания, как что происходит и преобразуется
+      let str = 12345;
+      console.log(str);
+      console.log(typeof str);
+      let str1 = str.toString();
+      console.log(str1);
+      console.log(typeof str1);
+      let str2 = str1.split("");
+      console.log(str2);
+      console.log(typeof str2);
+      let str3 = str2.reverse();
+      console.log(str3);
+      let str4 = str3.join("");
+      console.log(str4);
+      console.log(typeof str4);
+        */
+
+      /**
+       * @param {number} x
+       * @return {boolean}
+       */
+
+      var isPalindrome = function (x) {
+        let y = x.toString().split("").reverse().join("");
+        if (x == y) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+
+      //   console.log(isPalindrome(121));
+    </script>
+  </body>
+</html>
